@@ -8,6 +8,7 @@ class personajes{
   float y;
   float z;
   int seccion;
+  int vidas = 4;
   
   personajes(float tempx, float tempy, int tempClass){
     x = tempx;
@@ -29,7 +30,7 @@ class personajes{
   }
   float player(){
     float mov;
-    if( x >= 0 &&  x <= a1.wEscenario() ){
+    if( keyPressed == true ){
       switch(key){
         case 'd':
         x+=2;
@@ -69,5 +70,8 @@ class personajes{
      image(CamDere,x,y);
      break;   
     }
+  }
+  int vidad(){
+    return vidas;
   }
 }

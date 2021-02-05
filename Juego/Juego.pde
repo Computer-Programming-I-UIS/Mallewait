@@ -8,7 +8,8 @@ void setup(){
   PersLoad();
   EsceLoad();
 }
-void draw(){   
+void draw(){
+  background(0);
   image(fondo,x,0);
   Hut();
   jugador.generador();

@@ -1,5 +1,5 @@
 void PersLoad(){
-    jugador = new personajes(20,20,1);
+    jugador = new personajes(width/10,height/3,1);
 }
 void Hub(){
 }
