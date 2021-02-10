@@ -1,5 +1,4 @@
 disparo[] bam = new disparo[3];
-
 class disparo{  
   float x;
   float y;

@@ -30,26 +30,21 @@ class personajes{
   int vidad(){
     return vidas;
   }
-  void Mov(int dir){
+  float Mov(int dir){
     PosiP.x += VelP.x*dir;
+    return PosiP.x;
   }
-  void Accion(){
-   if(PosiP.y + 64 <= height/2){
-     if(PosiP.y + 64 <= height/2 && Jump){
+  void Accion(){   
+    if(PosiP.y <= height/2 && Jump){
        PosiP.y -= VelP.y;
-     } else if (PosiP.y <= height/2){
-       PosiP.y += VelP.y;
-     } 
-    }
-   }
+    }    
+  }
   void teclado(){
     if(Izq){
       Mov(-1);
     }
     if(Der){
       Mov(1);
-    }
-    if(Jump){
     }
   }
   void display(){

@@ -13,8 +13,11 @@ void setup(){
   opciones = new Botones(250,2);
   fin = new Botones(480,3);
   about = new Botones(300,4);
+  volver = new Botones(192,0);
 }
 void draw(){
   background(0);
+  surface.setTitle("Mallewaitt");
   pantalla();
+  SwitcScreen();
 }

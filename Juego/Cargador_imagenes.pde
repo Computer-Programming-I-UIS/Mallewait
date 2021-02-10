@@ -3,6 +3,7 @@ PImage Ft;
 PImage Cesped;
 PImage Inicio;
 PImage Manito;
+PImage opcion;
 void imagenes(){
   fondo = loadImage("assets/Cielo.png");
   Ft = loadImage("assets/Fondo-tierra.png");
@@ -14,4 +15,5 @@ void imagenes(){
   Cesped = loadImage("assets/Cespe.png");
   Inicio = loadImage("assets/Pantalla_titulo.png");
   Manito = loadImage("assets/Manito.png");
+  opcion = loadImage("assets/Pantalla_opciones.png");
 }
