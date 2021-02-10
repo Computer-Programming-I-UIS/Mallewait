@@ -1,77 +1,79 @@
 PImage CamDere;
 PImage CamIzqu;
+PVector PosiP = new PVector(4,4);
+PVector VelP = new PVector(5,3);
 personajes jugador;
 
 class personajes{
-  
+  boolean Der=false,Izq=false,Jump=false,Proud=false;
   float x;
   float y;
   float z;
   int seccion;
   int vidas = 4;
+  int t = 0;
+  int salas = 1;
   
   personajes(float tempx, float tempy, int tempClass){
     x = tempx;
     y = tempy;
     seccion = tempClass;
+    PosiP.x = x;
+    PosiP.y = y;
   }
-  void generador(){
-    switch(seccion){
-      case 1:
-      imagen();
-      player();
-      aciones();
-      break;
-      case 2:
-      break;
-      case 3:
-      break;
-    }
-  }
-  float player(){
-    float mov;
-    if( keyPressed == true ){
-      switch(key){
-        case 'd':
-        x+=2;
-        break;
-        case 'a':
-        x-=2;
-        break;
-      }
-    }
-    mov = x;
-    return mov;
-  }
-  float aciones(){
-    float action;
-    if(keyPressed == true){
-      switch(key){
-        case 'w':
-        y--;
-        break;
-        case 's':
-        y++;
-        break;
-      }
-    }
-    action=y;
-    return action;
-  }
-  void imagen(){
-    switch(key){
-     case 'd':
-     image(CamDere,x,y);
-     break;
-     case 'a':
-     image(CamIzqu,x,y);
-     break;
-     default:
-     image(CamDere,x,y);
-     break;   
-    }
+  
+  void generator(){
+    teclado();
+    display();
+    Accion();
   }
   int vidad(){
     return vidas;
+  }
+  void Mov(int dir){
+    PosiP.x += VelP.x*dir;
+  }
+  void Accion(){
+   if(PosiP.y + 64 <= height/2){
+     if(PosiP.y + 64 <= height/2 && Jump){
+       PosiP.y -= VelP.y;
+     } else if (PosiP.y <= height/2){
+       PosiP.y += VelP.y;
+     } 
+    }
+   }
+  void teclado(){
+    if(Izq){
+      Mov(-1);
+    }
+    if(Der){
+      Mov(1);
+    }
+    if(Jump){
+    }
+  }
+  void display(){
+    switch(key){
+      case 'd':
+      case 'D':
+      case RIGHT:
+      image(CamDere,PosiP.x,PosiP.y);
+      break;
+      case 'a':
+      case 'A':
+      case LEFT:
+      image(CamIzqu,PosiP.x,PosiP.y);
+      break;
+      default:
+      image(CamDere,PosiP.x,PosiP.y);
+      break;
+    }
+  }
+  int Cambiar(){
+    if(PosiP.x == 0 || PosiP.x == width){
+      salas ++;
+      PosiP.x = width/2;
+    }
+    return salas;
   }
 }

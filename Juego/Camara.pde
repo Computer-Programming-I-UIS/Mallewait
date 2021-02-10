@@ -8,14 +8,12 @@ class camara{
   void primario(){
   }
   void movimiento(){
-    x=jugador.player();
-    y=jugador.aciones();
   }
   
 }
 void Hut(){
     image(Hui,0,0);
-    image(Pi, 5,5);
+      image(Pi, 5,5);
     switch(jugador.vidad()){
       case 0:
       ellipse(20,80,20,20);
