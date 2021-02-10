@@ -65,7 +65,7 @@ class personajes{
     }
   }
   int Cambiar(){
-    if(PosiP.x == 0 || PosiP.x == width){
+    if(PosiP.x <= 0 || PosiP.x >= width){
       salas ++;
       PosiP.x = width/2;
     }

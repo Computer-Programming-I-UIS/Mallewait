@@ -63,7 +63,7 @@ int[][] E3 = {
 void sala(){
   for(int i = 0; i < 18; i++){
     for(int j = 0; j < 24; j++){
-      switch(d){
+      switch(jugador.Cambiar()){
         case 1:
         if(E1[i][j] == 1){
           image(Cesped,32*j,32*i);
@@ -71,12 +71,12 @@ void sala(){
         break;
         case 2:
         if(E2[i][j] == 1){
-          image(Cesped,64*j,64*i);
+          image(Cesped,32*j,32*i);
         }
         break;
         case 3:
         if(E3[i][j] == 1){
-          image(Cesped,64*j,64*i);
+          image(Cesped,32*j,32*i);
         }
         break;
       }
