@@ -1,10 +1,10 @@
 PImage CamDere;
 PImage CamIzqu;
-PVector PosiP = new PVector(4,4);
-PVector VelP = new PVector(5,1);
 personajes jugador;
 
 class personajes{
+  PVector PosiP = new PVector(4,4);
+  PVector VelP = new PVector(5,4);
   boolean Der=false,Izq=false,Jump=false,Proud=false,Floor=true,Shot=false;
   float x;
   float y;
@@ -15,7 +15,7 @@ class personajes{
   int salas = 1;
   int h = 64;
   float angle = 0;
-  int gravedad = 1;
+  float gravedad = 9.8;
   float multi = 0.1;
   
   personajes(float tempx, float tempy, int tempClass){
@@ -57,8 +57,6 @@ class personajes{
         }
       break;
     }
-      x = PosiP.x + 22;
-      y = PosiP.y + 32;
     return PosiP.x;
   }
   float Accion(){
@@ -94,6 +92,9 @@ class personajes{
     }
   }
   void display(){
+    x = PosiP.x + 22;
+    y = PosiP.y + 32;
+    
     switch(key){
       case 'd':
       case 'D':
