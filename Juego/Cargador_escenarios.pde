@@ -1,5 +1,4 @@
-void SalaNow(){
-  
+void SalaNow(){  
   switch(Sala){
     case 1:      
     break;

@@ -16,12 +16,14 @@ void keyPressed(){
       break;
       case 'w':
       case 'W':
+        if(jugador.Floor){
         jugador.Jump = true;
+        }
       break;
       case 'j':
       case 'J':
       case '1':
-
+        jugador.Shot = true;
       break;
     }
   }
@@ -44,13 +46,13 @@ void keyReleased(){
     case 'w':
     case 'W':
       jugador.Jump = false;
+      jugador.Floor = false;
     break;
     case 'j':
     case 'J':
     case '1':
+      jugador.Shot = false;
     break;
     }
   }
-}
-void pantallas(){
 }

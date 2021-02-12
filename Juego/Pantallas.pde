@@ -9,13 +9,9 @@ void PantallaIn() {
 void GamePlay() {
   image(fondo, x, 0);
   image(Ft, 0, 0);
-  Hut();
-  for (int i = 0; i < bam.length; i++) {  
-    bam[i].sitio();
-    bam[i].bam();
-  }
   jugador.generator();
   sala();
+  Hut();
 }
 void Opciones() {
   image(opcion, 0, 0);
