@@ -15,7 +15,7 @@ class personajes{
   int salas = 1;
   int h = 64;
   float angle = 0;
-  float gravedad = 9.8;
+  float gravedad = 10;
   float multi = 0.1;
   
   personajes(float tempx, float tempy, int tempClass){
@@ -99,15 +99,18 @@ class personajes{
       case 'd':
       case 'D':
       case RIGHT:
-      image(CamDere,x,y);
+      if(Floor){image(CamDere,x,y);}
+      else if(!Floor){image(Sal_der,x,y);}
       break;
       case 'a':
       case 'A':
       case LEFT:
-      image(CamIzqu,x,y);
+      if(Floor){image(CamIzqu,x,y);}
+      else if(!Floor){image(Sal_izq,x,y);}
       break;
       default:
-      image(CamDere,x,y);
+      if(Floor){image(CamDere,x,y);}
+      else if(!Floor){image(Sal_der,x,y);}
       break;
     }
   }

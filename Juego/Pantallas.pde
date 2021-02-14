@@ -19,25 +19,28 @@ void Opciones() {
 }
 //Fin de las funciones
 
+//Cambiar el escenario
 void SwitcScreen() {
   if (Pantalla == 0) {
     if (jugar.funcion()) {
       Pantalla = 1;
     } else if (opciones.funcion()) {
       Pantalla = 2;
-    } else if (about.funcion() || fin.funcion()) {
+    } else if (about.funcion()){
+      Pantalla = 4;
+    } else if (fin.funcion()) {
       image(Manito, mouseX-40, mouseY + 10);
       textFont(pixelFont);
       fill(255);
       text("Aun no funciona", mouseX+200, mouseY);
     } 
-  } else if(Pantalla == 2){
+  } else if(Pantalla == 2 || Pantalla == 4){
     if (volver.funcion()) {
       Pantalla = 0;
     }
-  }
-  
+  }  
 }
+//Fin de la funcion
 
 //Hacer las pantallas
 void pantalla() {
@@ -53,7 +56,9 @@ void pantalla() {
     break;
   case 3://Pantalla de pause      
     break;    
-  case 4://Pantalla de adios
+  case 4://Pantalla acerca
+    acerca();
+    
     break;
   case 5:
     break;
@@ -123,7 +128,6 @@ class Botones {
       } else {
         reg = false;
       }
-      //mousePressed = false;
     }
     return reg;
   }
