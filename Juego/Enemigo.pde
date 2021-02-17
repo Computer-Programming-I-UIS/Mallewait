@@ -55,12 +55,14 @@ class enemigo{
   void display(){
     switch(clase){
       case 1://clase ligera
-        salud=1;
-        atk=1;
+      if(MirarD){image(EnLigDer,x,y);} 
+      else if(MirarI){image(EnLigIzq,x,y);}
+      else {image(EnLigIzq,x,y);}
       break;
       case 2://clase normal
-        salud=3;
-        atk=1;
+      if(MirarD){image(EnNorDer,x,y);} 
+      else if(MirarI){image(EnNorIzq,x,y);}
+      else {image(EnNorIzq,x,y);}
       break;
       case 3://clase pesada
       if(MirarD){image(EnPesDer,x,y);} 
