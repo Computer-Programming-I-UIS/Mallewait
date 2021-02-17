@@ -1,14 +1,15 @@
 ArrayList <disparo> balas;
+ArrayList <disparo> hostiles;
 class disparo{  
   PVector Posi= new PVector(2,2);
   int y = 6;
   int dir = 1;
   boolean T;
-  disparo(){
-    Posi.x = jugador.PosiP.x + 32;
-    Posi.y = jugador.PosiP.y + 64;
-    if(jugador.VisionI){T = true;}
-    if(jugador.VisionD){T = false;}
+  disparo(float tempx, float tempy, boolean d, boolean i){
+    Posi.x = tempx;
+    Posi.y = tempy;
+    if(i){T = true;}
+    if(d){T = false;}
   }
   void gen(){
     controles();
@@ -28,7 +29,7 @@ class disparo{
   }
   void display(){
     fill(Posi.x,Posi.y,Posi.x/100);
-    circle(Posi.x,Posi.y,10);
+    circle(Posi.x,Posi.y,3);
   }
 }
 void bam(){
@@ -38,5 +39,11 @@ void bam(){
     if(bala.Posi.x <= 0 || bala.Posi.x >= width ){
       balas.remove(i);
     }     
-  }
+  } for(int i = hostiles.size() - 1; i >= 0; i--){
+    disparo hostil = hostiles.get(i);
+    hostil.gen();
+    if(hostil.Posi.x <= 0 || hostil.Posi.x >= width ){
+      hostiles.remove(i);
+    }
+  }  
 }

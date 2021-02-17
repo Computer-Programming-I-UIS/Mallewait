@@ -8,6 +8,12 @@ PImage Tierra;
 PImage acerca;
 PImage Sal_der;
 PImage Sal_izq;
+PImage EnLigDer;
+PImage EnLigIzq;
+PImage EnNorDer;
+PImage EnNorIzq;
+PImage EnPesDer;
+PImage EnPesIzq;
 void imagenes(){
   fondo = loadImage("assets/Cielo.png");
   Ft = loadImage("assets/Fondo-tierra.png");
@@ -24,4 +30,10 @@ void imagenes(){
   Manito = loadImage("assets/Manito.png");
   opcion = loadImage("assets/Pantallas/Pantalla_opciones.png");
   acerca = loadImage("about/about.png");
+  EnLigDer = loadImage("assets/Personaje/EnemigoL.png");
+  EnLigIzq = loadImage("assets/Personaje/EnemigoL(-1).png");
+  EnNorDer = loadImage("assets/Personaje/EnemigoN.png");
+  EnNorIzq = loadImage("assets/Personaje/EnemigoN(-1).png");
+  EnPesDer = loadImage("assets/Personaje/EnemigoP.png");
+  EnPesIzq = loadImage("assets/Personaje/EnemigoP(-1).png");
 }

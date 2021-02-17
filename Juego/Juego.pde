@@ -22,6 +22,8 @@ void setup(){
   }
   prueba = new cubo(11,10);
   balas = new ArrayList< disparo>();
+  hostiles = new ArrayList<disparo>();
+  primero = new enemigo(width/2,height/2,3);
 }
 void draw(){
   background(0);

@@ -114,9 +114,42 @@ class personajes{
       if(Floor){image(CamIzqu,x,y);}
       else if(!Floor){image(Sal_izq,x,y);}
       break;
+      case 'w':
+      case 'W':
+      if(Floor){//Cambio
+        if(VisionD){  
+          image(CamDere,x,y);
+        } else if (VisionI){
+          image(CamIzqu,x,y);
+        }
+      }
+      else if(!Floor){
+        if(VisionD){  
+        image(Sal_der,x,y);
+        } else if (VisionI){
+        image(Sal_izq,x,y);
+        }else {
+          image(Sal_der,x,y);
+        }
+      }
+      break;
       default:
-      if(Floor){image(CamDere,x,y);}
-      else if(!Floor){image(Sal_der,x,y);}
+        if(Floor){
+          if(VisionD){  
+            image(CamDere,x,y);
+          } else if (VisionI){
+            image(CamIzqu,x,y);
+          } else {
+            image(CamDere,x,y);
+          }
+        }
+        else if(!Floor){
+          if(VisionD){  
+          image(Sal_der,x,y);
+          } else if (VisionI){
+          image(Sal_izq,x,y);
+          }
+        }
       break;
     }
   }

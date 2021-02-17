@@ -27,8 +27,7 @@ void keyPressed(){
       break;
       case 'j':
       case 'J':
-      case '1':
-        jugador.Shot = true;
+        balas.add(new disparo(jugador.PosiP.x, jugador.PosiP.y,jugador.VisionD,jugador.VisionI));
       break;
     }
   }
@@ -55,7 +54,7 @@ void keyReleased(){
     case 'j':
     case 'J':
     case '1':
-      balas.add(new disparo());
+      
       
     break;
     }
