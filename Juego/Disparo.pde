@@ -5,8 +5,8 @@ class disparo{
   int dir = 1;
   boolean T;
   disparo(){
-    Posi.x = jugador.PosiP.x;
-    Posi.y = jugador.PosiP.y + 32;
+    Posi.x = jugador.PosiP.x + 32;
+    Posi.y = jugador.PosiP.y + 64;
     if(jugador.VisionI){T = true;}
     if(jugador.VisionD){T = false;}
   }
