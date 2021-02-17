@@ -20,8 +20,8 @@ void imagenes(){
   S1 = loadImage("assets/Escenario-1-Prueba.png");
   Cesped = loadImage("assets/Cespe.png");
   Tierra = loadImage("assets/Tierra.png");
-  Inicio = loadImage("assets/Pantalla_titulo.png");
+  Inicio = loadImage("assets/Pantallas/Pantalla_titulo.png");
   Manito = loadImage("assets/Manito.png");
-  opcion = loadImage("assets/Pantalla_opciones.png");
+  opcion = loadImage("assets/Pantallas/Pantalla_opciones.png");
   acerca = loadImage("about/about.png");
 }

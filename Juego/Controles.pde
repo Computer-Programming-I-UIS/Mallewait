@@ -5,6 +5,8 @@ void keyPressed(){
       case 'a':
       case 'A':
         jugador.Izq = true;
+        jugador.VisionI = true;
+        jugador.VisionD = false;
       break;
       case 's':
       case 'S':
@@ -13,11 +15,14 @@ void keyPressed(){
       case 'd':
       case 'D':
         jugador.Der = true;
+        jugador.VisionI = false;
+        jugador.VisionD = true;
       break;
       case 'w':
       case 'W':
         if(jugador.Floor){
         jugador.Jump = true;
+        jugador.Floor = false;
         }
       break;
       case 'j':
@@ -46,12 +51,12 @@ void keyReleased(){
     case 'w':
     case 'W':
       jugador.Jump = false;
-      jugador.Floor = false;
     break;
     case 'j':
     case 'J':
     case '1':
-      jugador.Shot = false;
+      balas.add(new disparo());
+      
     break;
     }
   }

@@ -8,9 +8,12 @@ void PantallaIn() {
 }
 void GamePlay() {
   image(fondo, x, 0);
-  image(Ft, 0, 0);
+  image(Ft, 0, 0);  
+  prueba.coX();
   jugador.generator();
+  bam();
   sala();
+  
   Hut();
 }
 void Opciones() {

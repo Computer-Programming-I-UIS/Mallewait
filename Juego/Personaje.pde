@@ -5,7 +5,7 @@ personajes jugador;
 class personajes{
   PVector PosiP = new PVector(4,4);
   PVector VelP = new PVector(5,4);
-  boolean Der=false,Izq=false,Jump=false,Proud=false,Floor=true,Shot=false;
+  boolean Der=false,Izq=false,Jump=false,Proud=false,Floor=true,Shot=false,VisionD=false,VisionI=false,Cambio =false;
   float x;
   float y;
   float z;
@@ -118,9 +118,13 @@ class personajes{
     if(PosiP.x >= width && salas != 4){
       salas ++;
       PosiP.x = 10;
+      Cambio = true;
     } else if(PosiP.x <= 0 && salas != 1){
       salas --;
       PosiP.x = width - 10;
+      Cambio = true;
+    } else { 
+      Cambio = false;
     }
     return salas;
   }

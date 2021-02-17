@@ -15,10 +15,18 @@ void setup(){
   fin = new Botones(480,3);
   about = new Botones(300,4);
   volver = new Botones(340,0);
+  for(int i = 0; i < 18 ; i++){
+    for(int j =0; j < 24; j++){
+    cubos[i][j] = new cubo(0,0);
+    }
+  }
+  prueba = new cubo(11,10);
+  balas = new ArrayList< disparo>();
 }
 void draw(){
   background(0);
   surface.setTitle("Mallewaitt");
+  
   pantalla();
   SwitcScreen();
 }
