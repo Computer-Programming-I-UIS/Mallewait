@@ -4,8 +4,8 @@
   ## _Descripción_
   
    _Juego de accion de plataformas con toques de MetroidVania, asumes el rol del soldado Roberto 
-   un integrante del peloton de infanterias Hercules del ejercito colombiano, en  un momento de descuido 
-   todo el peloton fue atacado de improvisto por varios aviones MIG-29 del ejecito de Venezuela, probocando 
+   un integrante del peloton de infanteria Hercules del ejercito colombiano, en  un momento de descuido 
+   todo el peloton fue atacado de improvisto por varios aviones MIG-29 del ejecito de Venezuela, provocando 
    que el peloton se disolviera en plena selva, tu unica mision es sobrevivir y escapar.
     
   ## Funcionamiento
