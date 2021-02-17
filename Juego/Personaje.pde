@@ -48,9 +48,15 @@ class personajes{
       break;
       case 2:
       case 3:
+      case 4:
+      case 5:  
+      case 6:
+      case 7:
+      case 8:
+      case 9:
       PosiP.x += VelP.x*dir;
       break;
-      case 4:
+      case 10:
       if( Der == true && PosiP.x >= width - 10){ } 
       else if(Izq || Der){
           PosiP.x += VelP.x*dir;
@@ -115,7 +121,7 @@ class personajes{
     }
   }
   int Cambiar(){
-    if(PosiP.x >= width && salas != 4){
+    if(PosiP.x >= width && salas != 10){
       salas ++;
       PosiP.x = 10;
       Cambio = true;
